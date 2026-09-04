@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLOCK DROP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="game-card">
+      <div class="header">
+        <div>
+          <p class="eyebrow">GITHUB PAGES GAME</p>
+          <h1>BLOCK DROP</h1>
+        </div>
+        <button id="startBtn" class="primary-btn">START / RESTART</button>
+      </div>
+
+      <div class="game-layout">
+        <div class="board-wrap">
+          <canvas id="game" width="300" height="600" aria-label="ブロック落下ゲーム"></canvas>
+
+          <div id="overlay" class="overlay">
+            <div>
+              <h2 id="overlayTitle">BLOCK DROP</h2>
+              <p id="overlayText">STARTを押してゲーム開始</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="stat">
+            <span>SCORE</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span>LINES</span>
+            <strong id="lines">0</strong>
+          </div>
+          <div class="stat">
+            <span>LEVEL</span>
+            <strong id="level">1</strong>
+          </div>
+
+          <div class="next-box">
+            <span>NEXT</span>
+            <canvas id="next" width="120" height="120"></canvas>
+          </div>
+
+          <div class="help">
+            <h3>操作</h3>
+            <p>← →：移動</p>
+            <p>↓：ソフトドロップ</p>
+            <p>↑ / X：右回転</p>
+            <p>Z：左回転</p>
+            <p>Space：ハードドロップ</p>
+            <p>P：一時停止</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mobile-controls" aria-label="スマホ用操作ボタン">
+        <button data-action="left">←</button>
+        <button data-action="rotate-left">↶</button>
+        <button data-action="down">↓</button>
+        <button data-action="rotate-right">↷</button>
+        <button data-action="right">→</button>
+        <button data-action="drop" class="wide">DROP</button>
+        <button data-action="pause" class="wide">PAUSE</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
